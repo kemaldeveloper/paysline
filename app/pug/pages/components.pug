@@ -1,0 +1,28 @@
+include ../layout/_mixins
+doctype html
+html(lang="en")
+  block head
+  include ../layout/_head
+  body
+    .wrapper
+      // Header
+      include ../layout/_header
+
+      // Main
+      main.main
+        .container
+          .mb-5
+            include ./components/typography
+          .d-flex.flex-column.align-items-start(style='row-gap: 10px')
+            +button('Sign up')
+            form.form
+              +input('email', 'email', 'Email', 'true')
+              +input('password', 'password', 'Password', 'true')
+              +button('Sign in')
+
+      // Footer
+      include ../layout/_footer
+
+    // Scripts
+    script(src='js/libs.min.js', defer)
+    script(src='js/main.bundle.js', defer)
