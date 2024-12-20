@@ -34,8 +34,19 @@ const { watch, src, dest, parallel, series } = gulp;
 
 const jsLibsPaths = ['node_modules/jquery/dist/jquery.min.js', 'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'];
 
+const cssLibsPaths = ['node_modules/animate.css/animate.min.css'];
+
 function jsLibs() {
   return src(jsLibsPaths).pipe(concat('libs.min.js')).pipe(uglify()).pipe(dest('app/js')).pipe(browsersync.stream());
+}
+
+function cssLibs() {
+  return src(cssLibsPaths)
+    .pipe(concat('libs.min.css'))
+    .pipe(autoprefixer(['last 10 versions']))
+    .pipe(cleancss({ level: { 1: { specialComments: 0 } } }))
+    .pipe(dest('app/css'))
+    .pipe(browsersync.stream());
 }
 
 function js() {
@@ -182,5 +193,5 @@ function startWatch() {
 
 // Export tasks
 export const compress = series(compressImages);
-export const build = series(cleanBuild, jsLibs, minJs, css, html, buildCopy, svgSprite);
-export default series(jsLibs, js, css, html, svgSprite, parallel(browserSync, startWatch));
+export const build = series(cleanBuild, jsLibs, cssLibs, minJs, css, html, buildCopy, svgSprite);
+export default series(jsLibs, cssLibs, js, css, html, svgSprite, parallel(browserSync, startWatch));
