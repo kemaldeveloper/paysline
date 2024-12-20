@@ -9,16 +9,54 @@ html(lang="en")
       include ../layout/_header
 
       // Main
-      main.main
+      main.main(style="padding: 50px 0")
         .container
-          .mb-5
-            include ./components/typography
-          .d-flex.flex-column.align-items-start(style='row-gap: 10px')
-            +button('Sign up')
+          //- TYPOGRAPHY
+          .mb-5.d-flex.flex-column.align-items-start.mb-5.bg-body(style='row-gap: 30px')
+            +title-1('Typography-', '1')
+            +title-2('Typography-2')
+            +title-3('Typography-3')
+            +title-4('Typography-4')
+            +title-5('Typography-5')
+
+            +undersub
+              | Undersub
+
+            +body
+              | Body
+
+          //- FORM-ELMENTS
+          .d-flex.flex-column.align-items-start.mb-5(style='row-gap: 10px')
             form.form
               +input('email', 'email', 'Email', 'true')
               +input('password', 'password', 'Password', 'true')
-              +button('Sign in')
+              .mb-3
+                +button('button', 'Sign in')
+              +checkbox
+          
+          //- TABS
+          .d-flex.flex-column.align-items-start.mb-5(style='row-gap: 10px')
+            .custom-tabs
+              nav
+                div.nav.nav-tabs(id="nav-tab" role="tablist")
+                  +tabBtn('Entertainment', 'entertainment', true)
+                  +tabBtn('Business & Utility', 'business')
+                  +tabBtn('Education', 'education')
+                  +tabBtn('Health & Fitness', 'health')
+              .tab-content(id="nav-tabContent")
+                +tabContent('entertainment', true)
+                  p Entertainment
+                +tabContent('business')
+                  p Business & Utility
+                +tabContent('education')
+                  p Education
+                +tabContent('health')
+                  p Health & Fitness
+
+          .d-flex(style='background: #003CC9; padding: 10px')
+            .me-3
+              +cookieBtn('Decline', 'outlined')
+            +cookieBtn('Accept', 'filled')
 
       // Footer
       include ../layout/_footer

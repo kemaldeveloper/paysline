@@ -1,4 +1,14 @@
-header.b-header 
+include ./_mixins
+
+header.b-header
   .container
-    .row 
-      .col Header
+    .d-flex.justify-content-between.align-items-center
+      +logo('/')
+      nav.nav.nav-menu
+        +navLink('#', 'How it works')
+        +navLink('#', 'Calculator')
+        +navLink('#', 'User consent')
+        +navLink('#', 'About us')
+      ._authorization
+        +link('#', 'Sign up')
+        +button('a', 'Sign in', 'small', '#')
