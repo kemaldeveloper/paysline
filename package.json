@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "type": "module",
   "private": true,
+  "homepage": "https://kemaldeveloper.github.io/paysline/",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
