@@ -1,0 +1,35 @@
+include ../layout/_mixins
+doctype html
+html(lang="en")
+  block head
+  include ../layout/_head
+  body
+    .wrapper
+
+      // Main
+      main.main
+        section.b-authorization
+          ._content(style="background-image: url('img/sign-up/bg.jpg')")
+            .container
+              ._form-wrap 
+                form._form(action="#" id="signIn")
+                  .d-flex.justify-content-between.mb-7
+                    ._form-title
+                      h5 Sign Up
+                    ._form-logo
+                      +logo('/')
+                  +input('text', 'name', 'Name', 'true')
+                  +input('email', 'email', 'Email', 'true')
+                  +input('password', 'password', 'Password', 'true')
+                  .mb-4(style="padding-top: 11px")
+                    +button('button', 'Sign Up')
+                  .d-flex.justify-content-center.align-items-center
+                    ._form-description.me-1
+                      span Don't have an account?
+                    +accentLink('Sign in', 'sign-in.html')
+
+
+
+    // Scripts
+    script(src='js/libs.min.js', defer)
+    script(src='js/main.bundle.js', defer)

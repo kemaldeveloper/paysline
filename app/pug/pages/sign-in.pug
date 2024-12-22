@@ -1,0 +1,37 @@
+include ../layout/_mixins
+doctype html
+html(lang="en")
+  block head
+  include ../layout/_head
+  body
+    .wrapper
+
+      // Main
+      main.main
+        section.b-authorization
+          ._content(style="background-image: url('img/sign-in/bg.jpg')")
+            .container
+              ._form-wrap 
+                form._form(action="#" id="signIn")
+                  .d-flex.justify-content-between.mb-7
+                    ._form-title
+                      h5 Sign In
+                    ._form-logo
+                      +logo('/')
+                  +input('email', 'email', 'Email', 'true')
+                  +input('password', 'password', 'Password', 'true')
+                  .d-flex.justify-content-between.mb-3.pt-1
+                    +checkbox
+                    +accentLink('Forgot password?', '#')
+                  .mb-4(style="padding-top: 11px")
+                    +button('button', 'Sign In')
+                  .d-flex.justify-content-center.align-items-center
+                    ._form-description.me-1
+                      span Don't have an account?
+                    +accentLink('Sign up', 'sign-up.html')
+
+
+
+    // Scripts
+    script(src='js/libs.min.js', defer)
+    script(src='js/main.bundle.js', defer)
