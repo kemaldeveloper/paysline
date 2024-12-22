@@ -1,6 +1,6 @@
 # PAYSLINE
 
-AUTHOR: frontendDeveloper
+AUTHOR: [kemaldeveloper][https://github.com/kemaldeveloper]
 
 ## How to use
 
