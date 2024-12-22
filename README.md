@@ -1,6 +1,6 @@
 # PAYSLINE
 
-AUTHOR: [kemaldeveloper][https://github.com/kemaldeveloper]
+AUTHOR: [kemaldeveloper](https://github.com/kemaldeveloper)
 
 ## How to use
 
