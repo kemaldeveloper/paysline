@@ -1,22 +1,45 @@
 .hamburger
+  cursor: pointer
+  border: none
+  background: transparent
 
   &-box
     position: relative
     display: inline-block
-    width: 26px
-    height: 11px
+
+    &--black
+      width: 26px
+      height: 11px
+
+      .hamburger-inner
+        background: $black
+        width: 20px
+        height: 3px
+        &::after
+          width: 26px
+          height: 3px
+          background: $black
+
+    &--gray
+      width: 14px
+      height: 11px
+
+      .hamburger-inner
+        background: #C0C0C0
+        width: 14px
+        height: 3px
+        &::after
+          background: #C0C0C0
+          width: 11px
+          height: 3px
 
   &-inner
-    width: 20px
-    height: 3px
-    background: $black
     position: absolute
     top: 0
+    right: 0
 
     &::after
       content: ''
-      width: 26px
-      height: 3px
-      background: $black
       position: absolute
-      bottom: 0
+      right: 0
+      top: 8px

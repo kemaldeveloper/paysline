@@ -3,7 +3,7 @@ include ./_mixins
 header.b-header
   .container
       .row
-        .col-3.d-flex.align-items-center
+        .col-xl-3.col.d-flex.align-items-center
           ._logo
             +logo('/')
         .col-6.d-xl-flex.d-none.align-items-center.justify-content-center
@@ -15,7 +15,29 @@ header.b-header
         .col-xl-3.col.d-flex.align-items-center.justify-content-end
           ._authorization
             .d-xl-block.d-none
-              +link('#', 'Sign up')
-            +button('a', 'Sign in', '#', 'small',)
+              +link('sign-up.html', 'Sign up')
+            +button('a', 'Sign in', 'sign-in.html', 'small',)
             .d-xl-none.d-block
-              +hamburger
+              button.hamburger(type='button', data-bs-toggle=`offcanvas` data-bs-target='#offcanvasRight' aria-controls='offcanvasRight')
+                .hamburger-box.hamburger-box--black
+                  .hamburger-inner 
+
+div.offcanvas.offcanvas-end(tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel")
+  div.offcanvas-header.justify-content-between
+    .offcanvas-logo
+      +logo('/')
+    .d-flex.align-items-center
+      .me-4
+        +button('a', 'Sign in', 'sign-in.html', 'small',)
+      .ms-3
+        button.hamburger(type='button', data-bs-dismiss="offcanvas" aria-label="Close")
+          .hamburger-box.hamburger-box--gray
+            .hamburger-inner
+  div.offcanvas-body
+    .offcanvas-inner.d-flex.flex-column
+      +link('sign-up.html', 'Sign up')
+      nav.nav.nav-menu.d-inline-flex.flex-column
+        +navLink('#', 'How it works')
+        +navLink('#', 'Calculator')
+        +navLink('#', 'User consent')
+        +navLink('#', 'About us')
