@@ -1,8 +1,29 @@
 .footer
-  padding-bottom: 20px
-  margin-top: 61px
+  margin: 61px 20px 19px
+  border: 1px solid #44B4FF
+  // padding: 18px 0 24px
+  border-radius: 20px
 
   &__content
-    border: 1px solid #44B4FF
-    padding: 18px 85px 24px 84px
-    border-radius: 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__logo
+    max-width: 146px
+    margin-right: 34px
+
+  &__item
+    border-left: 1px solid $light_b
+    padding-left: 30px
+    padding-top: 23px
+    padding-bottom: 25px
+
+    &:first-child
+      padding-right: 30px
+
+  &__link
+    font-weight: 700
+    font-size: 15px
+    line-height: 26px
+    color: $black

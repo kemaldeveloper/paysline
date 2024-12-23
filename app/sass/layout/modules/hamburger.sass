@@ -1,0 +1,22 @@
+.hamburger
+
+  &-box
+    position: relative
+    display: inline-block
+    width: 26px
+    height: 11px
+
+  &-inner
+    width: 20px
+    height: 3px
+    background: $black
+    position: absolute
+    top: 0
+
+    &::after
+      content: ''
+      width: 26px
+      height: 3px
+      background: $black
+      position: absolute
+      bottom: 0

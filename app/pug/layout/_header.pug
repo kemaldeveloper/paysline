@@ -2,13 +2,20 @@ include ./_mixins
 
 header.b-header
   .container
-    .d-flex.justify-content-between.align-items-center
-      +logo('/')
-      nav.nav.nav-menu
-        +navLink('#', 'How it works')
-        +navLink('#', 'Calculator')
-        +navLink('#', 'User consent')
-        +navLink('#', 'About us')
-      ._authorization
-        +link('#', 'Sign up')
-        +button('a', 'Sign in', '#', 'small',)
+      .row
+        .col-3.d-flex.align-items-center
+          ._logo
+            +logo('/')
+        .col-6.d-xl-flex.d-none.align-items-center.justify-content-center
+          nav.nav.nav-menu
+            +navLink('#', 'How it works')
+            +navLink('#', 'Calculator')
+            +navLink('#', 'User consent')
+            +navLink('#', 'About us')
+        .col-xl-3.col.d-flex.align-items-center.justify-content-end
+          ._authorization
+            .d-xl-block.d-none
+              +link('#', 'Sign up')
+            +button('a', 'Sign in', '#', 'small',)
+            .d-xl-none.d-block
+              +hamburger

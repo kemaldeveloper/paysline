@@ -1,4 +1,13 @@
 footer.b-footer 
   .container
     ._content
-      +logo('/')
+      .d-inline-flex.align-items-end
+        ._logo
+          +logo('/')
+        .copyright 
+          span All rights reserved © 2024
+      .d-flex
+        ._item
+          a._link(href="#") Privacy Policy
+        ._item
+          a._link(href="mailto:info@paysline.com") info@paysline.com
