@@ -2,8 +2,76 @@
   background: #D9E9FB
   border-radius: 30px
   margin-bottom: 13px
+  position: relative
+  // height: calc( 100vh - 89px )
+  padding: 73px 0 138px
 
-.test
-  width: 30px
-  height: 30px
-  background: $accent
+  &__content
+    display: flex
+    justify-content: center
+
+  &__inner
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 711px
+    background: url('../img/promo/border.png') 0 0 / 100% calc(100% - 1px) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0))
+    border-radius: 20px
+    padding: 44px 0 86px
+    position: relative
+
+  .title
+    margin-bottom: 36px
+
+  .undersub
+    max-width: 535px
+    margin: 0 auto 30px
+
+  &__subtitle
+    font-weight: 600
+    font-size: 16px
+    line-height: 32px
+    letter-spacing: 0.16px
+    margin-bottom: 17px
+
+  &__platforms
+    display: flex
+    align-items: center
+    column-gap: 24px
+
+  .btn
+    position: absolute
+    bottom: -24px
+
+  &__images
+    .promo__img
+      position: absolute
+      &:nth-child(1)
+        top: 16.7vh
+        left: 4.4vw
+        height: 5.711vh
+        width: 2.864vw
+        // top: 161px
+        // left: 86px
+      &:nth-child(2)
+        top: 16.4vh
+        right: 0
+        height: 44.340vh
+        width: 14.843vw
+      &:nth-child(3)
+        right: 148px
+        top: calc( 100% - 354px )
+      &:nth-child(4)
+        top: 398px
+        left: 114px
+      &:nth-child(5)
+        top: 449px
+        left: 233px
+      &:nth-child(6)
+        top: 245px
+        left: 156px
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover

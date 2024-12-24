@@ -1,3 +1,34 @@
 section.b-promo 
-  .container promo
-    .test.animate__animated.animate__fadeInLeft
+  .container
+    ._content
+      ._inner.animate__animated.animate__fadeInUp.animate__fast
+        h1.title
+          | A Trusted Way 
+          span.accent to Generate Income 
+          | With Your App
+        +undersub
+          |Withdraw funds anytime, no subscriptions, ads, or in-app purchases required. Your data is secure, with no shady permissions and full GDPR compliance.
+
+        ._subtitle
+          span Supported platforms:
+        ._platforms
+          +icon('apple')
+          +icon('android')
+          +icon('microsoft')
+          +icon('unity')
+        +button('a', 'Start earning now', 'sign-up.html', 'medium')
+        
+
+    ._images
+      ._img.animate__animated.animate__fadeInRight
+        img(src="img/promo/img-1.png" alt="image")
+      ._img.animate__animated.animate__fadeInLeft
+        img(src="img/promo/img-2.png", alt="image")
+      ._img.animate__animated.animate__fadeInTopLeft
+        img(src="img/promo/img-3.png" alt="image")
+      ._img.animate__animated.animate__fadeInBottomLeft
+        img(src="img/promo/img-4.png" alt="image")
+      ._img.animate__animated.animate__fadeInTopRight
+        img(src="img/promo/img-5.png" alt="image")
+      ._img.animate__animated.animate__fadeInTopRight
+        img(src="img/promo/img-6.png" alt="image")

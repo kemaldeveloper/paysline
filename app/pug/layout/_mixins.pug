@@ -1,6 +1,11 @@
+mixin icon(name)
+  svg(class='icon icon--' + name, fill='currentColor')
+    use(xlink:href='img/svg-sprite.svg#' + name)
+
 mixin title-1(title, accent)
   h1.title= title
     span.accent= accent
+    
 
 mixin title-2(title)
   h2.title-2= title
