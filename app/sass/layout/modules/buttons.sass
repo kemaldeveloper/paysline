@@ -32,7 +32,6 @@
     max-width: 101px
     padding: 9px 24px
     white-space: nowrap
-
     +md
       font-size: 13px
       padding: 4px 13px 6px
@@ -40,6 +39,20 @@
   @media (hover: hover)
     &:hover
       background: darken($accent, 10%)
+
+.tab-btn
+  border: 1px solid $accent-opacity
+  border-radius: 5px
+  color: $accent-opacity
+  font-weight: 700
+  font-size: 15px
+  line-height: 20px
+  padding: 7.5px 22.2px 8.5px
+  background: transparent
+  &.active
+    background: $accent
+    border-color: transparent
+    color: $white
 
 .cookie-btn
   font-weight: 700

@@ -1,0 +1,72 @@
+.categories
+  margin-bottom: 105px
+
+  &__title
+    text-align: center
+    max-width: 678px
+    margin: 0 auto 67px
+
+  &__pagination
+    display: flex
+    column-gap: 23px
+    justify-content: center
+    margin-bottom: 51px
+
+  &__slider
+
+    &-item
+      height: 375px
+
+    &-img
+      position: absolute
+      left: 0
+      top: 0
+      max-width: 286px
+      border-top-left-radius: 20px
+      border-bottom-left-radius: 20px
+      overflow: hidden
+
+    &-content
+      background: #FFFFFF
+      border: 1px solid #D9E7FB
+      border-radius: 20px
+      margin-left: 258px
+      padding: 37px 43px 38px 69px
+      display: flex
+      column-gap: 53px
+
+    &-col
+      &:first-child
+        flex: 0 0 250px
+      &:last-child
+        flex: 0 0 451px
+        display: flex
+        flex-direction: column
+        row-gap: 28px
+
+    &-title
+      margin-bottom: 19px
+
+    &-semi
+      position: relative
+      margin-bottom: 12px
+      &::after
+        content: ''
+        position: absolute
+        width: 69px
+        height: 1px
+        background: $accent
+        top: 50%
+        left: 32px
+        transform: translateY(-50%)
+
+    &-name
+      font-weight: 700
+      font-size: 18px
+      line-height: 30px
+      letter-spacing: 0.18px
+
+    &-job
+      font-weight: 400
+      font-size: 18px
+      line-height: 30px

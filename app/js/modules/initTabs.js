@@ -13,6 +13,4 @@ export const initTabs = () => {
       tabTrigger.show();
     });
   });
-
-  console.log(triggerTabList);
 };
