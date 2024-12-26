@@ -1,0 +1,55 @@
+.solution
+  margin-bottom: 20px
+
+  &__content
+    background: #D9E9FB
+    border-radius: 30px
+    padding-top: 68px
+    padding-bottom: 66px
+
+  &__inner
+    row-gap: 11px
+
+  &__row
+
+    &:first-child
+      display: flex
+      column-gap: 11px
+
+      .solution__item
+        flex-grow: 1
+        width: 100%
+
+    &:last-child
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      column-gap: 11px
+
+  &__img
+    background: linear-gradient(163deg, #d9e7fb 39%, rgba(55, 115, 255, 0.6) 86%)
+    flex: 0 0 587px
+    border-radius: 20px
+    position: relative
+
+    &-wrap
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 0
+      max-width: 395px
+      width: 100%
+
+  &__item
+    background: $white
+    border-radius: 20px
+    padding: 34px 35px 28px 37px
+
+    &-icon
+      margin-bottom: 20px
+
+    &-title
+      margin-bottom: 40px
+      max-width: 255px
+
+    &-text
+      row-gap: 29px

@@ -1,0 +1,45 @@
+section.b-solution
+  ._content
+    .container
+      ._inner.d-flex.flex-column
+        ._row
+          ._item
+            ._item-icon
+              include ../../config/svg/users.svg
+            ._item-title(style="max-width: 418px")
+              +title-3('Transparent and Based on User Consent')
+            ._item-text.d-flex.flex-column
+              +body
+                p To qualify for payments from us, every application must obtain clear end-user consent. Users must be fully informed about how their devices will be utilized in exchange for free access to the application. They must explicitly agree to share their internet connection with Name (see example consent form). This process involves:
+              +body
+                ul 
+                  li 1. Clearly informing the user.
+                  li 2. Securing their consent for this activity.
+          ._img
+            ._img-wrap
+              include ../../config/svg/solution.svg
+        ._row
+          ._item
+            ._item-icon
+              include ../../config/svg/magnifier.svg
+            ._item-title
+              +title-3('Versions Testing')
+            ._item-text.d-flex.flex-column
+              +body
+                p Before releasing any SDK version, we rigorously test it across multiple environments and deploy it on internal apps first. This ensures developers receive a thoroughly tested SDK with minimal bugs and a straightforward integration process.
+          ._item
+            ._item-icon
+              include ../../config/svg/integration.svg
+            ._item-title
+              +title-3('Easy Integration')
+            ._item-text.d-flex.flex-column
+              +body
+                p Paysline SDK is easy to integrate, needing just a few libraries and a couple of lines of code. Detailed documentation is included, and you’ll also access the Developer Console to track daily earnings based on active users.
+          ._item
+            ._item-icon
+              include ../../config/svg/note.svg
+            ._item-title
+              +title-3('Terms of Service')
+            ._item-text.d-flex.flex-column
+              +body
+                p To use our SDK, simply add a brief disclaimer to your Terms of Service, indicating the inclusion of Paysline SDK. Additionally, you must obtain user consent, such as through a pop-up notification.
