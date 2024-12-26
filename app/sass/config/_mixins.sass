@@ -11,7 +11,7 @@
       src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
     @else
       src: url('#{$file-path}.eot')
-      src: url('#{$file-path}.otf') format('opentype'), url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
 
 // Horizontal gradient - from left to right
 =gradient_x($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%)
