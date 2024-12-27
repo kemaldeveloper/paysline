@@ -1,11 +1,10 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 
 export const initCategoriesSLider = () => {
   const sliders = document.querySelectorAll('.categories__slider');
 
   sliders.forEach(function (item, i) {
-    console.log(item, i);
     const swiper = new Swiper(item, {
       modules: [Pagination],
       slidesPerView: 1,

@@ -4,22 +4,37 @@ section.b-estimate
       .row 
         .col-6 
           ._title
-            include ../../config/svg/calculator.svg
+            ._title-icon
+              include ../../config/svg/calculator.svg
             +title-2('Estimate Your Potential Earnings')
-          
-        .col-6 
-          ._text
-            +body
-              p Our payout system is flexible, allowing you to choose between receiving payments monthly or when your earnings reach a specific threshold (no more than once a month). Simply enter your average daily active users (ADAU) to see how much you could earn each month.
           ._calc
-            table._calc-table
-              tbody 
-                tr 
-                  td Revenue range from:
-                  td $1000
-                tr 
-                  td up to:
-                  td $5000
+            ._calc-term
+              span Average daily active users:
+            ._calc-wrap 
+              ._calc-input
+                input.form-control(type="number" min="0" max="999999999" placeholder="100 000" id="calcValue" name="calc-value")
+              ._calc-text
+                p This tool helps estimate your potential earnings. For an accurate understanding of how much you could earn, please contact us directly or register for the Developers Console.
+        .col-6
+          ._box
+            ._text
+              +body
+                p Our payout system is flexible, allowing you to choose between receiving payments monthly or when your earnings reach a specific threshold (no more than once a month). Simply enter your average daily active users (ADAU) to see how much you could earn each month.
+            ._values
+              table._values-table
+                tbody 
+                  tr 
+                    td
+                      span Revenue range from:
+                    td
+                      span $
+                        span(id="calcResultFrom") 1000
+                  tr 
+                    td 
+                      span up to:
+                    td
+                      span $
+                      span(id="calcResultToo") 5000
   .container
     ._bottom
       +button('a', 'Start earning now', 'sign-in.html', 'medium')

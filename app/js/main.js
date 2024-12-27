@@ -1,3 +1,4 @@
+import { calculator } from './modules/calculator.js';
 import { formSubmit } from './modules/formSubmit.js';
 import { initCategoriesSLider } from './modules/initCategoriesSlider.js';
 import { initTabs } from './modules/initTabs.js';
@@ -8,4 +9,5 @@ window.addEventListener('load', function () {
   initLazyLoad();
   formSubmit();
   initCategoriesSLider();
+  calculator();
 });
