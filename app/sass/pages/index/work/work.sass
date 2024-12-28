@@ -3,16 +3,23 @@
   &__title
     text-align: center
     margin-bottom: 21px
+    +md
+      margin-bottom: 29px
 
   &__text
     text-align: center
     max-width: 751px
     margin: 0 auto 61px
+    +md
+      margin: 0 auto 41px
 
   &__img
     position: relative
     z-index: 1
-    // margin-bottom: 73px
+
+    svg
+      width: 100%
+      height: 100%
 
   &__inner
     display: grid
@@ -25,22 +32,39 @@
     padding: 160px 42px 48px 38px
     border: 1px solid $light_b
     border-radius: 30px
+    +xxl
+      grid-template-columns: repeat(2, 1fr)
+      column-gap: 50px
+    +lg
+      border: none
+      padding: 75px 0 48px
+      top: auto
+      column-gap: 34px
+    +md
+      grid-template-columns: 1fr
+      row-gap: 34px
+      padding: 39px 0 48px
 
     &-item
       display: flex
       align-items: flex-start
       column-gap: 30px
 
-      &:last-child
-        .work__inner-number
-          &::after
-            content: ''
-            position: absolute
-            width: 388px
-            height: 1px
-            background: #44B4FF
-            top: 2px
-            left: calc( 100% + 31px )
+      +sm
+        column-gap: normal
+        justify-content: space-between
+
+      &-line
+        position: absolute
+        background: #44B4FF
+        top: 2px
+        right: 0
+        height: 1px
+        width: 100%
+        +md
+          position: static
+          width: 1px
+          height: 100%
 
     &-number
       font-weight: 300
@@ -48,12 +72,39 @@
       line-height: 45px
       color: #44B4FF
       position: relative
+      +lg
+        font-size: 50px
+        line-height: 37px
+      +md
+        font-size: 40px
+        line-height: 44px
+        display: flex
+        flex-direction: column
+        align-items: center
+        row-gap: 9px
+        height: 100%
 
       .icon
-        position: absolute
-        left: calc( 100% + 27px )
-        width: 384px
-        height: 8px
+        width: 8px
+        height: 100%
+        fill: #44B4FF
+        +min_md
+          display: none
 
     &-text
       padding-top: 25px
+      position: relative
+      +md
+        padding-top: 0
+      +sm
+        max-width: 298px
+
+      .icon
+        fill: #44B4FF
+        position: absolute
+        top: 0
+        right: 0
+        width: 100%
+        height: 9px
+        +md
+          display: none

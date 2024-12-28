@@ -7,19 +7,27 @@ section.b-work
         +body
           p The Paysline SDK is a software component that can be integrated into your applications for Android, Unity, Windows, or macOS platforms. Here’s how it functions:
       ._img
-        include ../../config/svg/desktop-img.svg
+        .d-md-block.d-none
+          include ../../config/svg/desktop-img.svg
+        .d-md-none.d-block
+          include ../../config/svg/mobile-img.svg
 
       ._inner
         ._inner-item
           ._inner-number 
             span 1
-            +icon('long-arrow')
+            .d-flex.flex-column.align-items-center.flex-grow-1
+              ._inner-item-line.d-md-none
+              .arrow(style="margin-top: -2px")
           ._inner-text
+            +icon('long-arrow')
             +body
               p When a device running an application with the Paysline SDK is in an idle state and connected to Wi-Fi, it routes HTTP requests to gather publicly accessible web data, such as dynamic product prices on e-commerce websites.
         ._inner-item
-          ._inner-number 
+          ._inner-number
             span 2
+            ._inner-item-line.d-md-none
           ._inner-text
+            ._inner-item-line.d-md-block.d-none
             +body
               p This information is used by businesses for business intelligence, market research, and brand protection against fraud. The SDK manages requests within the Paysline ecosystem, ensuring that users' devices remain unaffected in performance and battery life.
