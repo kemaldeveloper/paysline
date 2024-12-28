@@ -9,11 +9,11 @@ html(lang="en")
       // Main
       main.main
         section.b-authorization
-          ._content(style="background-image: url('img/sign-up/bg.jpg')")
+          ._content(style="background-image: url('img/sign-up/bg.svg')")
             .container
               ._form-wrap 
                 form._form(action="#" id="signIn")
-                  .d-flex.justify-content-between.mb-7
+                  ._header.d-flex.justify-content-between.mb-md-7
                     ._form-title
                       h5 Sign Up
                     ._form-logo
@@ -21,7 +21,7 @@ html(lang="en")
                   +input('text', 'name', 'Name', 'true')
                   +input('email', 'email', 'Email', 'true')
                   +input('password', 'password', 'Password', 'true')
-                  .mb-4(style="padding-top: 11px")
+                  .mb-md-4.mb-2(style="padding-top: 11px")
                     +button('button', 'Sign Up')
                   .d-flex.justify-content-center.align-items-center
                     ._form-description.me-1

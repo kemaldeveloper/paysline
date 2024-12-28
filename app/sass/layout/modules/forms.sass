@@ -1,5 +1,8 @@
 .input-wrap
   margin-bottom: 24px
+  +md
+    margin-bottom: 16px
+
   .form-control
     font-weight: 400
     font-size: 18px
@@ -10,6 +13,11 @@
     outline: none
     color: $black
     padding: 0 0 4px
+
+    +md
+      font-size: 16px
+      padding: 0 0 0 1px
+
     &::placeholder
       color: rgba($black, 30%)
     &:focus

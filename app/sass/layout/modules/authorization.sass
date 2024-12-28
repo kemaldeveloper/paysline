@@ -1,6 +1,8 @@
 .authorization
   padding: 20px 0
   height: 100vh
+  +md
+    padding: 0
 
   .container
     height: 100%
@@ -12,6 +14,13 @@
     background-size: cover
     border-radius: 30px
     overflow: hidden
+    +md
+      border-radius: 0
+      padding: 0
+
+  &__header
+    +md
+      margin-bottom: 63px
 
   &__form-wrap
     height: 100%
@@ -26,20 +35,30 @@
     background: $white
     padding: 25px 29px
     border-radius: 20px
+    +md
+      padding: 15px 22px
 
     &-title
       font-family: $titleFont
       font-weight: 700
       font-size: 36px
       line-height: 37px
+
+      +md
+        font-size: 30px
+
       h5
         font: inherit
 
     &-logo
       max-width: 132px
+      +md
+        max-width: 100px
 
     &-description
       font-weight: 400
       font-size: 15px
       line-height: 30px
       letter-spacing: 0.15px
+      +md
+        font-size: 13px
