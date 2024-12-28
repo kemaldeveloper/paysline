@@ -1,29 +1,66 @@
 .footer
   margin: 61px 20px 19px
-  border: 1px solid #44B4FF
+  border: 1px solid $secondary
   // padding: 18px 0 24px
   border-radius: 20px
+  +md
+    padding: 23px 0
 
   &__content
     display: flex
     justify-content: space-between
     align-items: center
+    +md
+      flex-direction: column
+      align-items: stretch
+
+  &__wrap
+    +md
+      padding-bottom: 16px
+      border-bottom: 1px solid $light_b
+    +sm
+      margin-bottom: 13px
+
+  &__inner
+    display: flex
+    +sm
+      flex-direction: column
+      row-gap: 8px
 
   &__logo
     max-width: 146px
     margin-right: 34px
+    +lg
+      max-width: 123px
+    +md
+      margin-right: 0
+      margin-bottom: 13px
 
   &__item
     border-left: 1px solid $light_b
     padding-left: 30px
     padding-top: 23px
     padding-bottom: 25px
+    +lg
+      padding: 15px 0 15px 15px
+    +md
+      border: none
+    +sm
+      padding: 0
 
     &:first-child
       padding-right: 30px
+      +lg
+        padding-right: 15px
+      +md
+        padding-left: 0
+      +sm
+        padding-right: 0
 
   &__link
     font-weight: 700
     font-size: 15px
     line-height: 26px
     color: $black
+    +md
+      font-size: 13px
