@@ -9,6 +9,7 @@ export const initCategoriesSLider = () => {
       modules: [Pagination],
       slidesPerView: 1,
       autoHeight: true,
+      spaceBetween: 3,
       on: {
         init: function () {
           const paginationButtons = document.querySelectorAll('.categories__pagination button');
