@@ -8,6 +8,7 @@ export const initCategoriesSLider = () => {
     const swiper = new Swiper(item, {
       modules: [Pagination],
       slidesPerView: 1,
+      autoHeight: true,
       on: {
         init: function () {
           const paginationButtons = document.querySelectorAll('.categories__pagination button');
