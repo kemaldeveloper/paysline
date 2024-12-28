@@ -12,7 +12,7 @@ html(lang="en")
           ._content(style="background-image: url('img/sign-up/bg.svg')")
             .container
               ._form-wrap 
-                form._form(action="#" id="signIn")
+                form._form(action="#" id="signUp")
                   ._header.d-flex.justify-content-between.mb-md-7
                     ._form-title
                       h5 Sign Up
@@ -27,6 +27,7 @@ html(lang="en")
                     ._form-description.me-1
                       span Don't have an account?
                     +accentLink('Sign in', 'sign-in.html')
+                  .mt-3.d-none.alert.text-center.text-success(id="authMessage" role="alert")
 
 
 
