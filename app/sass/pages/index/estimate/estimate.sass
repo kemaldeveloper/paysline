@@ -5,30 +5,46 @@
     color: $white
     background: $accent
     border-radius: 30px
-    padding: 48px 0 70px
+    padding: 48px 0 73px
+    +sm
+      border-radius: 20px
+      padding: 27px 0 70px
 
   &__title
     display: flex
     column-gap: 41px
-    margin-bottom: 117px
+    // margin-bottom: 117px
+    +xl
+      max-width: 500px
+      // margin-bottom: 50px
+    +sm
+      column-gap: 26px
 
     &-icon
       flex: 0 0 34px
       margin-top: 12px
+      +sm
+        flex: 0 0 29.75px
 
   &__bottom
     display: flex
     align-items: center
     justify-content: center
     background: #D9E9FB
-    padding: 37px 0 43px
     border-bottom-left-radius: 30px
     border-bottom-right-radius: 30px
+    padding: 37px 0 43px
+    +sm
+      padding: 35px 0px 35px
 
   &__values
     border: 1px solid rgba($white, 50%)
     border-radius: 20px
     padding: 9px 0 9px 30px
+    +xl
+      max-width: 582px
+    +sm
+      padding: 9px 0 9px 18px
 
     &-table
       width: 100%
@@ -43,28 +59,44 @@
           &:first-child
             width: 172px
             padding-right: 18px
+            +sm
+              width: 140px
             span
               font-weight: 700
               font-size: 20px
               line-height: 30px
+              +sm
+                font-size: 18px
           &:last-child
             font-weight: 400
             font-size: 60px
-            // line-height: 30px
+            +xl
+              font-size: 50px
+            +sm
+              font-size: 45px
 
     &-item
       display: flex
       column-gap: 36px
 
   &__box
-    padding: 10px 0 0 13px
+    +min_lg
+      padding: 10px 0 0 13px
 
   &__text
-    margin-bottom: 61px
+    +min_lg
+      padding: 10px 0 0 13px
 
   &__calc
     display: flex
     column-gap: 23px
+    padding-top: 43px
+    +lg
+      margin-bottom: 43px
+    +sm
+      flex-direction: column
+      padding-top: 24px
+      margin-bottom: 35px
 
     &-wrap
       flex-grow: 1
@@ -74,8 +106,12 @@
       font-size: 20px
       line-height: 30px
       letter-spacing: 0.2px
-      flex: 0 0 154px
-      max-width: 154px
+      +min_sm
+        flex: 0 0 154px
+        max-width: 154px
+      +sm
+        font-size: 18px
+        margin-bottom: 19px
 
     &-input
       margin-bottom: 29px

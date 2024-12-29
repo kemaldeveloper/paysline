@@ -2,24 +2,27 @@ section.b-estimate(id="calculator")
   ._inner
     .container
       .row 
-        .col-6 
+        .col-lg-6.col-12.mb-md-5.mb-4
           ._title
             ._title-icon
               include ../../config/svg/calculator.svg
             +title-2('Estimate Your Potential Earnings')
-          ._calc
-            ._calc-term
-              span Average daily active users:
-            ._calc-wrap 
-              ._calc-input
-                input.form-control(type="number" min="0" max="999999999" placeholder="100 000" id="calcValue" name="calc-value")
-              ._calc-text
-                p This tool helps estimate your potential earnings. For an accurate understanding of how much you could earn, please contact us directly or register for the Developers Console.
-        .col-6
-          ._box
-            ._text
+        .col-lg-6.col-12.mb-lg-5.pt-md-0.pt-2
+          ._text
               +body
                 p Our payout system is flexible, allowing you to choose between receiving payments monthly or when your earnings reach a specific threshold (no more than once a month). Simply enter your average daily active users (ADAU) to see how much you could earn each month.
+      .row
+        .col-lg-6.col-md-10.col-12
+            ._calc
+              ._calc-term
+                span Average daily active users:
+              ._calc-wrap 
+                ._calc-input
+                  input.form-control(type="number" min="0" max="999999999" placeholder="100 000" id="calcValue" name="calc-value")
+                ._calc-text
+                  p This tool helps estimate your potential earnings. For an accurate understanding of how much you could earn, please contact us directly or register for the Developers Console.
+        .col-lg-6.col-12
+          ._box
             ._values
               table._values-table
                 tbody 
