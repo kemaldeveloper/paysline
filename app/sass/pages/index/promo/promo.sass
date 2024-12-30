@@ -3,8 +3,14 @@
   border-radius: 30px
   margin-bottom: 13px
   position: relative
-  // height: calc( 100vh - 89px )
   padding: 73px 0 138px
+  +xl
+    padding: 157px 0 415px
+    margin-bottom: 69px
+  +md
+    border-radius: 20px
+  +sm
+    padding: 157px 0 438px
 
   &__content
     display: flex
@@ -18,14 +24,19 @@
     padding: 44px 0 86px
     position: relative
     border-radius: 20px
-    background: url('../img/icons/rectangle.svg') 0 0 / 100% calc(100% - 1px) no-repeat,
-    // overflow: hidden
+    // background: url('../img/icons/rectangle.svg') 0 0 / 100% calc(100% - 1px) no-repeat,
+    border: 1px solid $accent
+    width: 100%
+    +xxl
+      padding: 28px 0 86px
+    +md
+      padding: 23px 24px 84px
 
     &::after
       content: ''
       position: absolute
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0))
-      filter: blur(10px)
+      backdrop-filter: blur(4px)
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0))
       border-radius: 20px
       width: 100%
       height: 100%
@@ -35,11 +46,26 @@
 
     &-img
       position: absolute
-      top: 23.260vh
-      left: -5.625vw
-      width: 45.520vw
-      height: 0.830vh
+      top: 224px
+      left: -108px
+      width: 873px
+      height: 8px
       z-index: -2
+      +xxl
+        width: 845px
+      +xl
+        width: 8px
+        height: 625px
+        left: 49.5%
+        top: -45px
+      +sm
+        left: 48.9%
+        height: 806px
+
+      div
+        width: 100%
+        height: 100%
+
       svg
         display: block
         width: 100%
@@ -47,10 +73,15 @@
 
   .title
     margin-bottom: 36px
+    +xxl
+      max-width: 600px
 
   .undersub
     max-width: 535px
     margin: 0 auto 30px
+    +sm
+      max-width: 275px
+      margin: 0 auto 38px
 
   &__subtitle
     font-weight: 600
@@ -64,45 +95,161 @@
     align-items: center
     column-gap: 24px
 
-  .btn
+  &__btn-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+    column-gap: 32px
     position: absolute
-    bottom: -24px
+    bottom: -29.5px
+    background: #D9E7FB
+    +md
+      bottom: -25.5px
+    +sm
+      column-gap: 26px
+
+    &::after,
+    &::before
+      content: ''
+      width: 6px
+      height: 6px
+      background: $accent
+      border-radius: 50%
 
   &__images
     .promo__img
       position: absolute
       &:nth-child(1)
-        top: 16.6vh
-        left: 17vw
-        width: 2.865vw
-        height: 5.712vh
+        top: 161px
+        left: 326px
+        width: 55px
+        height: 55px
         filter: blur(1px)
+        +xxxl
+          left: 85px
+        +xxl
+          width: 37px
+          height: 37px
+        +xl
+          top: 75px
+          left: 320px
+        +lg
+          left: 260px
+        +md
+          left: 185px
+        +sm
+          left: 92px
+
       &:nth-child(2)
-        top: 16.4vh
-        right: 12.2vw
-        width: 14.844vw
-        height: 44.42vh
+        top: 158px
+        right: 232px
+        width: 285px
+        height: 427px
+        +xxxl
+          right: -6px
+        +xxl
+          top: 194px
+          width: 213px
+          height: 319px
+        +xl
+          top: auto
+          right: auto
+          bottom: 43px
+          left: 39%
+        +lg
+          left: 35.5%
+        +md
+          left: 32%
+        +sm
+          left: 21.5%
+          bottom: 47px
+
       &:nth-child(3)
-        top: 48.1vh
-        right: 21.75vw
-        width: 11.5625vw
-        height: 26.896vh
+        top: 463px
+        right: 418px
+        width: 222px
+        height: 259px
+        +xxxl
+          right: 178px
+        +xxl
+          width: 159px
+          height: 186px
+        +xl
+          top: auto
+          right: auto
+          bottom: -40px
+          left: 34%
+        +lg
+          left: 29%
+        +md
+          left: 24%
+        +sm
+          left: 13%
+
       &:nth-child(4)
-        top: 41.3vh
-        left: 18.4vw
-        width: 7.893vh
-        height: 3.959vw
+        top: 398px
+        left: 354px
+        width: 76px
+        height: 76px
+        +xxxl
+          left: 114px
+        +xxl
+          width: 51px
+          height: 51px
+        +xl
+          top: 32px
+          left: 540px
+        +lg
+          left: 450px
+        +md
+          left: 400px
+        +sm
+          left: auto
+          right: 71px
+
       &:nth-child(5)
-        top: 46.5vh
-        left: 24.58vw
-        width: 2.605vw
-        height: 5.193vh
+        top: 449px
+        left: 473px
+        width: 50px
+        height: 50px
         filter: blur(1px)
+        +xxxl
+          left: 233px
+        +xxl
+          top: 440px
+          left: 200px
+          width: 27px
+          height: 27px
+        +xl
+          top: 31px
+          left: 290px
+        +lg
+          left: 210px
+        +md
+          left: 135px
+        +sm
+          left: 59px
+
       &:nth-child(6)
-        top: 25.4vh
-        left: 20.625vw
-        width: 5.989vw
-        height: 11.941vh
+        top: 245px
+        left: 396px
+        width: 115px
+        height: 115px
+        +xxxl
+          left: 156px
+        +xxl
+          top: 263px
+          width: 77px
+          height: 77px
+        +xl
+          top: 45px
+          left: 46%
+        +lg
+          left: 45%
+        +md
+          left: 44%
+        +sm
+          left: 39.5%
 
       svg
         width: 100%

@@ -16,9 +16,13 @@ section.b-promo
           +icon('android')
           +icon('microsoft')
           +icon('unity')
-        +button('a', 'Start earning now', 'sign-up.html', 'medium')
+        ._btn-wrap 
+          +button('a', 'Start earning now', 'sign-up.html', 'medium')
         ._inner-img.animate__animated.animate__fadeInLeft
-          include ../../config/svg/long-arrow.svg
+          .d-xl-block.d-none
+            include ../../config/svg/long-arrow.svg
+          .d-xl-none
+            include ../../config/svg/h-long-arrow.svg
         
 
     ._images
