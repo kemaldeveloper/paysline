@@ -1,28 +1,66 @@
 .collection
   margin-bottom: 138px
+  +md
+    margin-bottom: 62px
 
   &__title
     text-align: center
-    margin-bottom: 42px
+    margin-bottom: 100px
+    +sm
+      max-width: 300px
+      margin: 0 auto 73px
 
   &__img
-    flex: 0 0 419px
-    max-width: 419px
-
+    background: #D9E9FB
+    border-top-left-radius: 30px
+    border-bottom-left-radius: 30px
+    position: relative
+    +min_xl
+      flex: 0 0 419px
+      max-width: 419px
+    +xl
+      height: 700px
+      border-radius: 30px
+    +lg
+      height: 600px
+    +sm
+      margin-right: -20px
+      height: 272px
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
     svg
       width: 100%
-      height: 100%
+      height: auto
+      position: absolute
+      top: -57px
+      +xl
+        height: 100%
+      +sm
+        top: -54px
+        left: -1px
+        height: 331px
 
   &__content
     display: flex
     column-gap: 11px
+    +xl
+      flex-direction: column
+    +sm
+      row-gap: 11px
 
   &__inner
-    display: grid
-    grid-template-rows: repeat(3, 1fr)
     row-gap: 11px
     flex-grow: 1
-    margin-top: 57px
+    +min_xl
+      display: grid
+      grid-template-rows: repeat(3, 1fr)
+    +xl
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      column-gap: 10px
+    +sm
+      margin-left: -20px
 
   &__item
     display: flex
@@ -31,15 +69,35 @@
     border: 1px solid $border
     border-top-right-radius: 20px
     border-bottom-right-radius: 20px
-    padding: 21px 30px 0 26px
+    padding: 21px 30px 26px 26px
+    +xl
+      flex: 0 0 calc(50% - 5px)
+      max-width: 50%
+      flex-direction: column
+      border-radius: 20px
+    +md
+      flex: 0 0 100%
+      max-width: 100%
+    +sm
+      padding: 21px 27px 30px 20px
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
 
     &-box
       display: flex
       align-items: flex-start
       column-gap: 26px
+      +xl
+        margin-bottom: 29px
+      +sm
+        max-width: 275px
+        margin-bottom: 23px
 
     &-icon
       margin-top: 8px
 
     &-text
       max-width: 461px
+      +sm
+        max-width: 251px
+        margin-left: auto
