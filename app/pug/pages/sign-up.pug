@@ -2,6 +2,7 @@ include ../layout/_mixins
 doctype html
 html(lang="en")
   block head
+    - var title = 'Sign Up, Paysline'
   include ../layout/_head
   body
     .wrapper
@@ -27,7 +28,7 @@ html(lang="en")
                     ._form-description.me-1
                       span Don't have an account?
                     +accentLink('Sign in', 'sign-in.html')
-                  .mt-3.d-none.alert.text-center.text-success(id="authMessage" role="alert")
+                  .mt-3.d-none.alert.text-center.text-succes(id="authMessage" role="alert")
 
 
 

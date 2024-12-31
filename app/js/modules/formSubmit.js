@@ -1,13 +1,13 @@
 export const formSubmit = () => {
   const authMessage = $('#authMessage');
 
-  $('.authorization__form').on('submit', function (e) {
+  $('#signUp').on('submit', function (e) {
     e.preventDefault();
 
     const formData = $(this).serialize();
 
     const isSuccess = true;
-    const message = isSuccess ? 'Спасибо, ваши данные отправлены!' : 'Неверный email или пароль. Попробуйте еще раз.';
+    const message = isSuccess ? 'Thank you, your information has been submitted' : 'Неверный email или пароль. Попробуйте еще раз.';
 
     authMessage.text(message);
     authMessage.removeClass('d-none', 'alert-success', 'alert-danger');
@@ -17,5 +17,10 @@ export const formSubmit = () => {
     if (isSuccess) {
       this.reset();
     }
+  });
+
+  $('#signIn').on('submit', function (e) {
+    e.preventDefault();
+    authMessage.removeClass('d-none');
   });
 };

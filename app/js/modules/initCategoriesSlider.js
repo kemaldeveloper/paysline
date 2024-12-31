@@ -9,6 +9,7 @@ export const initCategoriesSLider = () => {
       modules: [Pagination],
       slidesPerView: 1,
       autoHeight: true,
+      speed: 500,
       spaceBetween: 3,
       on: {
         init: function () {
