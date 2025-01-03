@@ -16,6 +16,33 @@
     display: flex
     justify-content: center
 
+  &__images-wrap
+    position: absolute
+    top: 0
+    left: 50%
+    right: 0
+    bottom: 0
+    transform: translateX(-50%)
+    width: 100%
+    height: 100%
+    max-width: 1409px
+    pointer-events: none
+    +xxl
+      max-width: 1240px
+    +xl
+      max-width: 952px
+    +lg
+      max-width: 728px
+    +md
+      max-width: 576px
+    +sm
+      max-width: 380px
+
+  &__images
+    width: 100%
+    height: 100%
+    position: relative
+
   &__inner
     display: flex
     flex-direction: column
@@ -52,7 +79,7 @@
       height: 8px
       z-index: -2
       +xxl
-        width: 845px
+        width: 860px
       +xl
         width: 8px
         height: 625px
@@ -121,7 +148,7 @@
       position: absolute
       &:nth-child(1)
         top: 161px
-        left: 326px
+        left: 86px
         width: 55px
         height: 55px
         filter: blur(1px)
@@ -142,13 +169,14 @@
 
       &:nth-child(2)
         top: 158px
-        right: 232px
         width: 285px
         height: 427px
+        right: 0
         +xxxl
           right: -6px
         +xxl
           top: 194px
+          right: 0
           width: 213px
           height: 319px
         +xl
@@ -166,9 +194,9 @@
 
       &:nth-child(3)
         top: 463px
-        right: 418px
         width: 222px
         height: 259px
+        right: 183px
         +xxxl
           right: 178px
         +xxl
@@ -188,9 +216,9 @@
 
       &:nth-child(4)
         top: 398px
-        left: 354px
         width: 76px
         height: 76px
+        left: 118px
         +xxxl
           left: 114px
         +xxl
@@ -209,10 +237,10 @@
 
       &:nth-child(5)
         top: 449px
-        left: 473px
         width: 50px
         height: 50px
         filter: blur(1px)
+        left: 237px
         +xxxl
           left: 233px
         +xxl
@@ -232,9 +260,9 @@
 
       &:nth-child(6)
         top: 245px
-        left: 396px
         width: 115px
         height: 115px
+        left: 160px
         +xxxl
           left: 156px
         +xxl
