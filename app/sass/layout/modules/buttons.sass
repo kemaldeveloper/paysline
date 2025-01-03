@@ -67,9 +67,10 @@
     border-color: transparent
     color: $white
 
-  &:hover
-    color: $accent
-    border-color: $accent
+  @media (hover: hover)
+    &:hover:not(.active)
+      color: $accent
+      border-color: $accent
 
 .cookie-btn
   font-weight: 700
