@@ -1,8 +1,11 @@
 export const scrollTo = () => {
-  $('a[href^="#"]').on('click', function (e) {
+  const offcanvas = $('.offcanvas');
+
+  $('a[data-href^="#"]').on('click', function (e) {
     e.preventDefault();
 
-    const target = $($(this).attr('href'));
+    const target = $($(this).attr('data-href'));
+    console.log(target);
 
     if (target.length) {
       $('html, body').animate(

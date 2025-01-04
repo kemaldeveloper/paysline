@@ -8,6 +8,7 @@
     +min_xl
       display: grid
       grid-template-columns: repeat(3, 1fr)
+      grid-auto-rows: auto
     +xl
       display: flex
       flex-wrap: wrap
@@ -17,7 +18,8 @@
   &__item
     display: flex
     flex-direction: column
-    row-gap: 29px
+    row-gap: 15px
+    justify-content: space-between
     border: 1px solid #D9E7FB
     border-radius: 20px
     padding: 36px 37px 29px
@@ -30,11 +32,22 @@
     &-wrap
       display: flex
       flex-direction: column
-      row-gap: 20px
+      row-gap: 35px
 
     &-icon
-      width: 46px
-      height: 42px
+
+      &--hand
+        width: 46px
+        height: 42px
+
+      &--basket
+        width: 38.2px
+        height: 48px
+
+      &--lamp
+        width: 35.98px
+        height: 48px
+
       svg
         width: 100%
         height: 100%

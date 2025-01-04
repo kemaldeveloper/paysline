@@ -30,14 +30,14 @@ div.offcanvas.offcanvas-end(tabindex="-1" id="offcanvasRight" aria-labelledby="o
       .me-4
         +button('a', 'Sign in', 'sign-in.html', 'small',)
       .ms-3
-        button.hamburger(type='button', data-bs-dismiss="offcanvas" aria-label="Close")
-          .hamburger-box.hamburger-box--gray
-            .hamburger-inner
+        //- button.hamburger(type='button', data-bs-dismiss="offcanvas" aria-label="Close")
+        //-   .hamburger-box.hamburger-box--gray
+        //-     .hamburger-inner
   div.offcanvas-body
     .offcanvas-inner.d-flex.flex-column
       +link('sign-up.html', 'Sign up')
       nav.nav.nav-menu.d-inline-flex.flex-column
-        +navLink('#', 'How it works')
-        +navLink('#', 'Calculator')
-        +navLink('#', 'User consent')
-        +navLink('#', 'About us')
+        a.nav-link(data-href="#work" type="button" data-bs-dismiss="offcanvas" aria-label="Close") How it works
+        a.nav-link(data-href="#calculator" type="button" data-bs-dismiss="offcanvas" aria-label="Close") Calculator
+        a.nav-link(data-href="#solution" type="button" data-bs-dismiss="offcanvas" aria-label="Close") User consent
+        a.nav-link(data-href="#about" type="button" data-bs-dismiss="offcanvas" aria-label="Close") About us
