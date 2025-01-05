@@ -123,7 +123,6 @@
         font-weight: 400
         font-size: 36px
         line-height: 30px
-        // letter-spacing: 
         background: transparent
         color: $white
         border: none
@@ -133,10 +132,11 @@
 
         &:focus
           background: transparent
-          color: darken($white, 30%)
+          box-shadow: none
+          color: $white
 
         &::placeholder
-          color: $white
+          color: darken($white, 30%)
 
     &-text
       font-weight: 400
