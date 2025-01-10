@@ -17,6 +17,36 @@
   &__content
     display: flex
     justify-content: center
+    position: relative
+
+    &-img
+      position: absolute
+      top: 224px
+      left: 145px
+      width: 873px
+      height: 8px
+      // z-index: -2
+      +xxl
+        width: 860px
+      +xl
+        width: 8px
+        height: 640px
+        left: 49.5%
+        top: -45px
+      +md
+        height: 620px
+      +sm
+        left: 48.9%
+        height: 806px
+
+      div
+        width: 100%
+        height: 100%
+
+      svg
+        display: block
+        width: 100%
+        height: 100%
 
   &__images-wrap
     position: absolute
@@ -56,7 +86,6 @@
     border-radius: 20px
     border: 1px solid $accent
     width: 100%
-    position: relative
     z-index: 1
     +xxl
       padding: 43px 0 86px
@@ -74,33 +103,6 @@
       top: 0
       left: 0
       z-index: -1
-
-    &-img
-      position: absolute
-      top: 224px
-      left: -108px
-      width: 873px
-      height: 8px
-      z-index: -2
-      +xxl
-        width: 860px
-      +xl
-        width: 8px
-        height: 625px
-        left: 49.5%
-        top: -45px
-      +sm
-        left: 48.9%
-        height: 806px
-
-      div
-        width: 100%
-        height: 100%
-
-      svg
-        display: block
-        width: 100%
-        height: 100%
 
   .title
     margin-bottom: 36px
